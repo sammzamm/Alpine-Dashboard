@@ -1,0 +1,95 @@
+body {
+  background: url("https://s-media-cache-ak0.pinimg.com/originals/1b/4f/8e/1b4f8eda07b7faedc6033b1ca077a163.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.logo {
+  margin-top: 300px;
+  color: black;
+ -webkit-text-fill-color: #000; /* Will override color (regardless of order) */
+ -webkit-text-stroke-width: 1px;
+ -webkit-text-stroke-color: #dcdcf6;
+}
+
+.logo h1{
+  text-align: center;
+font-family: 'Playfair Display', serif;
+font-size: 12vmin;
+}
+
+#AI {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 9vmin;
+  /*font-weight: lighter;*/
+}
+
+.container{
+  display: inline;
+  align-items: center;
+}
+
+.row{
+}
+
+
+  -webkit-keyframes hvr-ripple-in {
+    100% {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 1
+    }
+}
+
+.homeBtn {
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 50px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #a3bbdf;
+  opacity: 0.7;
+}
+
+@keyframes hvr-ripple-in {
+    100% {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 1
+    }
+}
+
+.hvr-ripple-in {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative
+}
+
+.hvr-ripple-in:before {
+    content: '';
+    position: absolute;
+    border: #5e96e0 solid 4px;
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s
+}
+
+.hvr-ripple-in:active:before, .hvr-ripple-in:focus:before, .hvr-ripple-in:hover:before {
+    -webkit-animation-name: hvr-ripple-in;
+    animation-name: hvr-ripple-in
+}

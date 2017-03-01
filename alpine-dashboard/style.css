@@ -1,0 +1,54 @@
+html {
+    /*background-color: blue;*/
+    width: 100%;
+}
+
+nav {
+    background-color: grey;
+}
+
+#routeInfo {
+    background-color: blue;
+    height: 500px;
+    width: 65%;
+    display: inline;
+}
+
+#routePhoto {
+    background-color: green;
+    height: 500px;
+    width: 35%;
+    display: inline;
+}
+
+#routeWeather {
+    background-color: yellow;
+    height: 500px;
+    width: 35%;
+    display: inline;
+}
+
+#routeRose {
+    background-color: red;
+    height: 500px;
+    width: 65%;
+    display: inline;
+}
+
+h1 {}
+
+h2 {
+    padding-left: 50%;
+}
+
+/*dropdown-submenu*/
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    /*left: 100%;*/
+    margin-top: -1px;
+}
