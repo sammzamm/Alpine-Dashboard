@@ -93,3 +93,8 @@ font-size: 12vmin;
     -webkit-animation-name: hvr-ripple-in;
     animation-name: hvr-ripple-in
 }
+
+.l-menu{
+  background-color:white;
+  display:none;
+}
