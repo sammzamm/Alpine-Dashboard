@@ -62,9 +62,9 @@ button:focus {outline:0;}
   padding-left: 10px;
   padding-right: 10px;
   height: 50px;
-  width: 250px;
+  width: 230px;
   font-family: 'Libre Baskerville', serif;
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: 3px;
   text-transform: uppercase;
   background-color: #000;

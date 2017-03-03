@@ -17,19 +17,59 @@
 </head>
 
 <body>
-    <div class="navbar-fixed">
-        <nav>
-            <button id="btndataMP" type="button" name="button"><a href="home.html">Back to Route Selector</a></button>
-        </nav>
+  <!-- ----  navigation bar ---- -->
+    <div class="container">
+        <div class="row">
+          <h4 id="location"></h4>
+            <div id="navBar" class="navbar-fixed">
+                <nav id="nav">
+                    <ul>
+                        <button id="back" type="button" class="btn btn-default"><a href="home.html">Back to Route List</a></button>
+                        <h3 id="header" class="text-center">RMNP Data Dashboard</h3>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </div>
-<!----  Route Informaiton  ---------------->
+    <!-- ----  End of navigation bar  ---- -->
 
-  <!-- --  Route Photo  -------------- -->
+    <!----  Route Informaiton  ---------------->
+    <h2 id="routeName"></h2>
+<hr>
+<div class="container">
+  <div class="row">
+    <table id="route-table" width="60">
+      <tr>
+        <th><h4 id="stars" class="glyphicon glyphicon-star"> Stars: </h4></th>
+        <th></th>
+      </tr>
+      <tr>
+        <td>Type:</td>
+        <td id="type"></td>
+      </tr>
+      <tr>
+        <td>Pitches:</td>
+        <td id="pitches"></td>
+      </tr>
+    </table>
+    </div>
+</div>
 
-  <!-- --  CAIC Rose  -------------------- -->
+      <!-- <p>The .table-condensed class makes a table more compact by cutting cell padding in half:</p> -->
 
-  <!-- --  Weather  ------------------------- -->
+    <!-- --  Route Photo  -------------- -->
 
+    <!-- --  CAIC Rose  -------------------- -->
+
+    <!-- --  Weather  ------------------------- -->
+    <div class="table-responsive">
+        <table class="table">
+            <div class="col-xs-8" id="routeInfo">
+                <h1 id="routeName"></h1>
+                <h2 id="routeGrade"></h2>
+            </div>
+        </table>
+    </div>
 
     <!----  Route Informaiton  ---------------->
     <!-- <div class="container-fluid">
@@ -44,19 +84,17 @@
             </div>
 
             <!-- --  Route Photo  -------------- -->
-            <div class="col-xs-4" id="routePhoto">
-                <img src="" alt="">
-            </div>
+    <!--
         </div>
-        <hr>
-        <!-- --  CAIC Rose  -------------------- -->
-        <div class="container-fluid">
+        <hr> -->
+    <!-- --  CAIC Rose  -------------------- -->
+    <!-- <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-4" id="routeRose">
                     <h2 class="text-center">CAIC Conditions</h2>
-                </div>
-                <!-- --  Weather  ------------------------- -->
-                <div class="col-xs-8" id="routeWeather">
+                </div> -->
+    <!-- --  Weather  ------------------------- -->
+    <!-- <div class="col-xs-8" id="routeWeather">
                     <div class="table-responsive">
                         <table class="table">
                             <h2 class="text-center">Rocky Mountain National Park</h2>

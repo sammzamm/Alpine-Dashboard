@@ -1,6 +1,5 @@
 $(document).ready(function() {
     var routeId = localStorage.getItem("routeId");
-    console.log('HELLO this is sams route id it\'s stupid', routeId);
 
         var routeId = localStorage.getItem("routeId");
 
@@ -10,42 +9,37 @@ $(document).ready(function() {
                 var allRoutes = data.routes;
                 for (var i = 0; i < allRoutes.length; i++) {
 
-                  // --  Route Name  --
+                    // --  Route Name + Rating  --
                     var route = allRoutes[i]
                     var name = route.name
+                    var rating = route.rating;
                     console.log("Name: " + name);
-                    $("#routeName").append(name)
+                    $("#routeName").append(name + "  -  " + rating)
 
+                    //  --  Route type  --
+                    var type = route.type
+                    $('#type').append(type)
 
+                    //  --  Route pitches  --
                     var pitches = route.pitches
                     console.log("Pitches: " + pitches);
+                    $("#pitches").append(pitches)
 
-
-                    //--  Route Image --
+                    //  --  Route Image --
                     var routeImg = route.imgMed
                     $('#routePhoto').prepend('<img src="' + routeImg + '" />')
 
-                    // --  Route Rating  --
-                    var rating = route.rating;
-                    console.log("Rating: " + rating);
-                    $('#routeGrade').append(rating)
-
-
+                    // --  Route stars  --
                     var stars = route.stars;
                     console.log("Stars: " + stars);
+                    $("#stars").append(stars)
 
 
-
+                    // --  Route location  --
                     var location = route.location;
                     console.log("Location: " + location);
+                    $("#location").append(location)
 
-
-                    var region = location[3];
-                    console.log("Region: " + region);
-                    var subRegion = location[4];
-                    console.log("Sub-region: " + subRegion);
-                    var crag = location[5];
-                    console.log("Crag: " + crag);
                 }
             })
     // });

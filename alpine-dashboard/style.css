@@ -6,11 +6,46 @@ html {
     overflow: hidden;
 }
 
-nav {
-    background-color: grey;
+/*--  nav bar  --*/
+
+#header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #4481db;
 }
-#btndataMP {
-  float:right;
+
+#back {
+  margin-right: 10px;
+  margin-top: 5px;
+  float: right;
+}
+/*--  nav bar end  --*/
+
+.container {
+  display: inline;
+}
+
+#routeName {
+  margin-top: 0px;
+}
+
+#route-table {
+  width: 20%;
+  heigth: 40%;
+  margin-left: 15px;
+}
+
+#route-container {
+}
+
+#nav {
+    background-color: #000;
+    opacity: 0.8;
+}
+
+#location {
+  font-size: 14px;
+  float: left;
 }
 
 #routeInfo {
@@ -20,10 +55,10 @@ nav {
 }
 
 #routePhoto {
-    background-color: green;
     height: 50vmin;
-    width: 35vmin;
+    width: auto;
     display: inline;
+    /*float: right;*/
 }
 
 #routeRose {
@@ -33,26 +68,32 @@ nav {
     display: inline;
 }
 
-#routeWeather {
+/*#routeWeather {
     background-color: red;
     height: 50vmin;
     width: 65vmin;
     display: inline;
-}
+}*/
 
 h1 {
     align-content: center;
-    font-family: 'Libre Baskerville', serif;
     font-family: 'Playfair Display', serif;
 }
 
 h2 {
   font-family: 'Libre Baskerville', serif;
+  font-size: 35px;
+  padding-left: 20px;
 }
 
-hr {
-weight: thicker;
+h3 {
+    font-family: 'Libre Baskerville', serif;
 }
+
+h4 {
+  font-size: 30px;
+}
+
 
 .row {
   display: inline;
