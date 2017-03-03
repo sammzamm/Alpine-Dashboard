@@ -52,13 +52,13 @@ $(document).ready(function() {
                 $('#tempC').append(tempC + "°F")
 
                 var apparentTempC = parsed_json['currently']['apparentTemperature'];
-                $('#apparentTempC').append(apparentTempC)
+                $('#apparentTempC').append(apparentTempC + "°F")
 
                 var iconC = parsed_json['currently']['icon'];
                 $('#iconC').append(iconC)
 
                 var precipProbC = parsed_json['currently']['precipProbability'];
-                $('#precipProbC').append(precipProbC)
+                $('#precipProbC').append(precipProbC + "%")
 
                 var windSpeedC = parsed_json['currently']['windSpeed'];
                 $('#windSpeedC').append(windSpeedC)
@@ -80,15 +80,15 @@ $(document).ready(function() {
                 // console.log(daily);
 
                 var temperatureMin = parsed_json['daily']['data'][0]['temperatureMin'];
-                $('#temperatureMin').append(temperatureMin)
+                $('#temperatureMin').append(temperatureMin + "°F")
                 console.log(temperatureMin);
 
                 var temperatureMax = parsed_json['daily']['data'][0]['temperatureMax'];
-                $('#temperatureMax').append(temperatureMax)
+                $('#temperatureMax').append(temperatureMax + "°F")
                 console.log(temperatureMax);
 
                 var windSpeed =  parsed_json['daily']['data'][0]['windSpeed'];
-                $('#windSpeed').append(windSpeed)
+                $('#windSpeed').append(windSpeed + "mph")
                 console.log(windSpeed);
 
                 var sunriseTime = parsed_json['daily']['data'][0]['sunriseTime'];
@@ -108,15 +108,15 @@ $(document).ready(function() {
                 // console.log(daily);
 
                 var temperatureMin2 = parsed_json['daily']['data'][1]['temperatureMin'];
-                $('#temperatureMin2').append(temperatureMin2)
+                $('#temperatureMin2').append(temperatureMin2 + "°F")
                 console.log(temperatureMin);
 
                 var temperatureMax2 = parsed_json['daily']['data'][1]['temperatureMax'];
-                $('#temperatureMax2').append(temperatureMax2)
+                $('#temperatureMax2').append(temperatureMax2 + "°F")
                 console.log(temperatureMax2);
 
                 var windSpeed2 =  parsed_json['daily']['data'][1]['windSpeed'];
-                $('#windSpeed2').append(windSpeed2)
+                $('#windSpeed2').append(windSpeed2 + "mph")
                 console.log(windSpeed2);
 
                 var sunriseTime2 = parsed_json['daily']['data'][1]['sunriseTime'];
@@ -137,15 +137,15 @@ $(document).ready(function() {
                 // console.log(daily);
 
                 var temperatureMin3 = parsed_json['daily']['data'][2]['temperatureMin'];
-                $('#temperatureMin3').append(temperatureMin3)
+                $('#temperatureMin3').append(temperatureMin3 + "°F")
                 console.log(temperatureMin3);
 
                 var temperatureMax3 = parsed_json['daily']['data'][2]['temperatureMax'];
-                $('#temperatureMax3').append(temperatureMax3)
+                $('#temperatureMax3').append(temperatureMax3 + "°F")
                 console.log(temperatureMax3);
 
                 var windSpeed3 =  parsed_json['daily']['data'][2]['windSpeed'];
-                $('#windSpeed3').append(windSpeed3)
+                $('#windSpeed3').append(windSpeed3 + "mph")
                 console.log(windSpeed3);
 
                 var sunriseTime3 = parsed_json['daily']['data'][2]['sunriseTime'];
