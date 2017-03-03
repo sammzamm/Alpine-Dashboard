@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Rubik|Playfair+Display:900" rel="stylesheet">
     <!--  jQuery -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="http://momentjs.com/downloads/moment.js"></script>
     <!--  Import Google Icon Font-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
@@ -17,94 +18,183 @@
 </head>
 
 <body>
-  <!-- ----  navigation bar ---- -->
-    <div class="container">
-        <div class="row">
-          <h4 id="location"></h4>
-            <div id="navBar" class="navbar-fixed">
-                <nav id="nav">
-                    <ul>
-                        <button id="back" type="button" class="btn btn-default"><a href="home.html">Back to Route List</a></button>
-                        <h3 id="header" class="text-center">RMNP Data Dashboard</h3>
-                    </ul>
-                </nav>
-            </div>
+    <!--  navigation bar -->
+    <div class="row">
+        <!-- <h4 id="location"></h4> -->
+        <div id="navBar" class="navbar-fixed">
+            <nav id="nav">
+                <ul>
+                    <button id="back" type="button" class="btn btn-default"><a href="home.html">Back to Route List</a></button>
+                    <h3 id="header" class="text-center">RMNP Data Dashboard</h3>
+                </ul>
+            </nav>
         </div>
     </div>
-    <!-- ----  End of navigation bar  ---- -->
+    <!--  End of navigation bar  -->
 
-    <!----  Route Informaiton  ---------------->
+    <!--  Route Informaiton  -->
     <h2 id="routeName"></h2>
-<hr>
-<div class="container">
-  <div class="row">
-    <table id="route-table" width="60">
-      <tr>
-        <th><h4 id="stars" class="glyphicon glyphicon-star"> Stars: </h4></th>
-        <th></th>
-      </tr>
-      <tr>
-        <td>Type:</td>
-        <td id="type"></td>
-      </tr>
-      <tr>
-        <td>Pitches:</td>
-        <td id="pitches"></td>
-      </tr>
-    </table>
-    </div>
-</div>
-
-      <!-- <p>The .table-condensed class makes a table more compact by cutting cell padding in half:</p> -->
-
-    <!-- --  Route Photo  -------------- -->
-
-    <!-- --  CAIC Rose  -------------------- -->
-
-    <!-- --  Weather  ------------------------- -->
-    <div class="table-responsive">
-        <table class="table">
-            <div class="col-xs-8" id="routeInfo">
-                <h1 id="routeName"></h1>
-                <h2 id="routeGrade"></h2>
-            </div>
-        </table>
-    </div>
-
-    <!----  Route Informaiton  ---------------->
-    <!-- <div class="container-fluid">
+    <hr>
+    <div id="route-container" class="container">
         <div class="row">
-            <div class="table-responsive">
-                <table class="table">
-                    <div class="col-xs-8" id="routeInfo">
-                        <h1 id="routeName"></h1>
-                        <h2 id="routeGrade"></h2>
-                    </div>
+            <div class="col-xs-12">
+                <table id="route-table" width="60">
+                    <tr>
+                        <th>
+                            <h4 id="stars" class="glyphicon glyphicon-star"> Stars: </h4></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>Type:</td>
+                        <td id="type"></td>
+                    </tr>
+                    <tr>
+                        <td>Pitches:</td>
+                        <td id="pitches"></td>
+                    </tr>
+                </table>
+                <img id="caic" src="caic.png" alt="CAIC-data">
+            </div>
+            <!--  CAIC Rose -->
+
+        </div>
+    </div>
+    <hr>
+
+    <!--  Route Photo -->
+    <div class="container">
+        <div class="row">
+            <div id="routePhoto" class="col-xs-6"></div>
+
+            <!--  Weather   -->
+
+            <!--  Current Conditions -->
+
+            <div id="weather" class="col-xs-6">
+                <table class="table text-center">
+                    <h3>Current Conditions</h3>
+                    <p id="summaryC"></p>
+                    <thead>
+                        <tr>
+                            <th id="">Temperateure</th>
+                            <th id="">Feels Like</th>
+                            <th id="">Chance of precipitation</th>
+                            <th id="">Wind Speed</th>
+                            <th id="">Cloud Cover</th>
+                            <th id=""></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="tempC"></td>
+                            <td id="apparentTempC"></td>
+                            <td id="precipProbC"></td>
+                            <td id="windSpeedC"></td>
+                            <td id="cloudCoverC"></td>
+                            <td id="iconC"></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
 
-            <!-- --  Route Photo  -------------- -->
-    <!--
-        </div>
-        <hr> -->
-    <!-- --  CAIC Rose  -------------------- -->
-    <!-- <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-4" id="routeRose">
-                    <h2 class="text-center">CAIC Conditions</h2>
-                </div> -->
-    <!-- --  Weather  ------------------------- -->
-    <!-- <div class="col-xs-8" id="routeWeather">
-                    <div class="table-responsive">
-                        <table class="table">
-                            <h2 class="text-center">Rocky Mountain National Park</h2>
-                        </table>
-                    </div>
-                    <h2 id="weatherArea">h2</h2>
-                </div>
+            <!-- Daily Weather -->
+
+            <div id="weather" class="col-xs-6">
+                <table class="table text-center">
+                    <h3>3 Day Forecast</h3>
+                    <thead>
+                        <tr>
+                            <th id="">Day</th>
+                            <th id="">Low</th>
+                            <th id="">High</th>
+                            <th id="">Wind Speed</th>
+                            <th id="">Sunrise</th>
+                            <th id="">Sunset</th>
+                            <th id=""></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: bold;">Tomorrow</td>
+                            <td id="temperatureMin"></td>
+                            <td id="temperatureMax"></td>
+                            <td id="windSpeed"></td>
+                            <td id="sunriseTime"></td>
+                            <td id="sunsetTime"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">Sunday</td>
+                            <td id="temperatureMin2"></td>
+                            <td id="temperatureMax2"></td>
+                            <td id="windSpeed2"></td>
+                            <td id="sunriseTime2"></td>
+                            <td id="sunsetTime2"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">Monday</td>
+                            <td id="temperatureMin3"></td>
+                            <td id="temperatureMax3"></td>
+                            <td id="windSpeed3"></td>
+                            <td id="sunriseTime3"></td>
+                            <td id="sunsetTime3"></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+
+            <!-- Hourly Weather -->
+<!--
+            <div id="weather" class="col-xs-6">
+                <table class="table text-center">
+                    <h3>Hourly Forecast</h3>
+                    <thead>
+                        <tr>
+                            <th id=""></th>
+                            <th id=""></th>
+                            <th id="">Temperateure</th>
+                            <th id="">Feels Like</th>
+                            <th id=""></th>
+                            <th id=""></th>
+                            <th id=""></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="iconC"></td>
+                            <td id="summaryC"></td>
+                            <td id="tempC"></td>
+                            <td id="apparentTempC"></td>
+                            <td id="precipProbC"></td>
+                            <td id="windSpeedC"></td>
+                            <td id="cloudCoverC"></td>
+                        </tr>
+                        <tr>
+                            <td id="">c</td>
+                            <td id="">c</td>
+                            <td id="">c</td>
+                            <td id="">c</td>
+                            <td id="">c</td>
+                            <td id="">c</td>
+                            <td id="">c</td>
+                        </tr>
+                        <tr>
+                            <td id="">d</td>
+                            <td id="">d</td>
+                            <td id="">d</td>
+                            <td id="">d</td>
+                            <td id="">d</td>
+                            <td id="">d</td>
+                            <td id="">d</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> -->
+
+            <!-- End Weather -->
         </div>
-    </div> -->
+    </div>
     <script src="app.js"></script>
 </body>
 
