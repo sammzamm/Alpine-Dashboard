@@ -3,13 +3,15 @@
 
 <head>
     <meta charset="utf-8">
+    <!--  Font Plug-in  ---->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Rubik|Playfair+Display:900" rel="stylesheet">
     <!--  jQuery -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <!--  Import Google Icon Font-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
     </script>
-    <script src="app.js"></script>
+
     <link rel="stylesheet" href="style.css">
     <title>RMNP Data Dashboard</title>
 </head>
@@ -17,37 +19,55 @@
 <body>
     <div class="navbar-fixed">
         <nav>
-            <label for="text">
-       <input type="text">
-       <input type="submit" value="submit">
-     </label>
-
-            <button id="btndataMP" type="button" name="button">populate MP data</button>
-            <button id="btndataWU" type="button" name="button">populate WU data</button>
+            <button id="btndataMP" type="button" name="button"><a href="home.html">Back to Route Selector</a></button>
         </nav>
-        </div>
+    </div>
+<!----  Route Informaiton  ---------------->
 
+  <!-- --  Route Photo  -------------- -->
+
+  <!-- --  CAIC Rose  -------------------- -->
+
+  <!-- --  Weather  ------------------------- -->
+
+
+    <!----  Route Informaiton  ---------------->
+    <!-- <div class="container-fluid">
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table">
+                    <div class="col-xs-8" id="routeInfo">
+                        <h1 id="routeName"></h1>
+                        <h2 id="routeGrade"></h2>
+                    </div>
+                </table>
+            </div>
+
+            <!-- --  Route Photo  -------------- -->
+            <div class="col-xs-4" id="routePhoto">
+                <img src="" alt="">
+            </div>
+        </div>
+        <hr>
+        <!-- --  CAIC Rose  -------------------- -->
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-8" id="routeInfo">
-                    <h1>h1</h1>
+                <div class="col-xs-4" id="routeRose">
+                    <h2 class="text-center">CAIC Conditions</h2>
                 </div>
-                <div class="col-xs-4" id="routePhoto">
-                    <h2>h2</h2>
+                <!-- --  Weather  ------------------------- -->
+                <div class="col-xs-8" id="routeWeather">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <h2 class="text-center">Rocky Mountain National Park</h2>
+                        </table>
+                    </div>
+                    <h2 id="weatherArea">h2</h2>
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-4" id="routeWeather">
-                    <h2>h2</h2>
-                </div>
-                <div class="col-xs-8" id="routeRose">
-                    <h2>h2</h2>
-                </div>
-            </div>
-        </div>
-
+    </div> -->
+    <script src="app.js"></script>
 </body>
 
 </html>

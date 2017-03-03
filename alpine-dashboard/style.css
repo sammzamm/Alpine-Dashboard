@@ -1,45 +1,70 @@
 html {
-    /*background-color: blue;*/
     width: 100%;
+    height: 100%;
+    clip: auto;
+    position: absolute;
+    overflow: hidden;
 }
 
 nav {
     background-color: grey;
 }
+#btndataMP {
+  float:right;
+}
 
 #routeInfo {
-    background-color: blue;
-    height: 500px;
-    width: 65%;
+    height: 50vmin;
+    width: 65vmin;
     display: inline;
 }
 
 #routePhoto {
     background-color: green;
-    height: 500px;
-    width: 35%;
-    display: inline;
-}
-
-#routeWeather {
-    background-color: yellow;
-    height: 500px;
-    width: 35%;
+    height: 50vmin;
+    width: 35vmin;
     display: inline;
 }
 
 #routeRose {
-    background-color: red;
-    height: 500px;
-    width: 65%;
+    background-color: ;
+    height: 50vmin;
+    width: 35vmin;
     display: inline;
 }
 
-h1 {}
+#routeWeather {
+    background-color: red;
+    height: 50vmin;
+    width: 65vmin;
+    display: inline;
+}
+
+h1 {
+    align-content: center;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Playfair Display', serif;
+}
 
 h2 {
-    padding-left: 50%;
+  font-family: 'Libre Baskerville', serif;
 }
+
+hr {
+weight: thicker;
+}
+
+.row {
+  display: inline;
+}
+
+/*mpImage*/
+
+#routePhoto {
+    width: auto;
+    height: 100%;
+}
+
 
 /*dropdown-submenu*/
 

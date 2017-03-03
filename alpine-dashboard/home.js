@@ -40,6 +40,11 @@ $(document).ready(function(){
 
 //--  Route link to alpine dashboard  ------
 
-
+$(".rLink").click(function(){
+  event.preventDefault();
+  var routeId = $(event.target).parent().attr('id');
+  localStorage.setItem("routeId", routeId);
+  window.location.href="index.html"
+})
   //--  Self envoked closure  --------
 })
